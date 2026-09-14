@@ -152,6 +152,7 @@
                             <button class="chip-btn" onclick="selectStaticOption('block-frappe-clasico', 'Mocachino', 10, this)">Mocachino</button>
                             <button class="chip-btn" onclick="selectStaticOption('block-frappe-clasico', 'Mango', 10, this)">Mango</button>
                             <button class="chip-btn" onclick="selectStaticOption('block-frappe-clasico', 'Fresa', 10, this)">Fresa</button>
+                            <button class="chip-btn" onclick="selectStaticOption('block-frappe-clasico', 'Lúcuma', 11, this)">Lúcuma (S/11)</button>
                         </div>
                         <button class="btn btn-primary btn-sm" style="width:100%" onclick="addStaticToCartWithValidation('Frapé Clásico', 10, 'block-frappe-clasico')">Agregar</button>
                     </div>
@@ -332,43 +333,45 @@
                 <div class="static-card" id="card-helado-soft">
                     <img loading="lazy" decoding="async" src="/tenants/deli-fresas/menu/helado-soft.webp" class="static-img">
                     <div class="static-info">
-                        <h3>Helado Soft</h3>
-                        <span class="static-price-tag">S/ 2.00</span>
+                        <h3>Helado Soft en cono</h3>
+                        <span class="static-price-tag">S/ 3.00</span>
                         <p style="font-size:0.75rem; margin:0 0 5px 0;">Sabor:</p>
                         <div class="chip-container">
-                            <button class="chip-btn" onclick="selectStaticOption('card-helado-soft', 'Vainilla', 2, this)">Vainilla</button>
-                            <button class="chip-btn" onclick="selectStaticOption('card-helado-soft', 'Chocolate', 2, this)">Choco</button>
-                            <button class="chip-btn" onclick="selectStaticOption('card-helado-soft', 'Mixto', 2, this)">Mixto</button>
+                            <button class="chip-btn" onclick="selectStaticOption('card-helado-soft', 'Vainilla', 3, this)">Vainilla</button>
+                            <button class="chip-btn" onclick="selectStaticOption('card-helado-soft', 'Chocolate', 3, this)">Chocolate</button>
+                            <button class="chip-btn" onclick="selectStaticOption('card-helado-soft', 'Mixto', 3, this)">Mixto</button>
                         </div>
-                        <button class="btn btn-primary btn-sm" style="width:100%" onclick="addStaticToCartWithValidation('Helado Soft', 2, 'card-helado-soft')">Agregar</button>
+                        <button class="btn btn-primary btn-sm" style="width:100%" onclick="addStaticToCartWithValidation('Helado Soft en cono', 3, 'card-helado-soft')">Agregar</button>
                     </div>
                 </div>
                 <div class="static-card" id="card-sundae">
                     <img loading="lazy" decoding="async" src="/tenants/deli-fresas/menu/sundae.webp" class="static-img">
                     <div class="static-info">
                         <h3>Sundae</h3>
-                        <span class="static-price-tag" id="price-card-sundae">Desde S/ 4.00</span>
+                        <span class="static-price-tag" id="price-card-sundae">Desde S/ 5.00</span>
                         <p style="font-size:0.75rem; margin:0 0 5px 0;">Sabor:</p>
                         <div class="chip-container">
-                            <button class="chip-btn" onclick="selectStaticOption('card-sundae', 'Chocolate', 4, this)">Choco</button>
-                            <button class="chip-btn" onclick="selectStaticOption('card-sundae', 'Fresa', 4, this)">Fresa</button>
-                            <button class="chip-btn" onclick="selectStaticOption('card-sundae', 'Maracuyá', 4, this)">Maracuyá</button>
-                            <button class="chip-btn" onclick="selectStaticOption('card-sundae', 'Oreo', 5, this)">Oreo (S/5)</button>
+                            <button class="chip-btn" onclick="selectStaticOption('card-sundae', 'Chocolate', 5, this)">Chocolate (S/5)</button>
+                            <button class="chip-btn" onclick="selectStaticOption('card-sundae', 'Manjar', 5, this)">Manjar (S/5)</button>
+                            <button class="chip-btn" onclick="selectStaticOption('card-sundae', 'Fresa', 5, this)">Fresa (S/5)</button>
+                            <button class="chip-btn" onclick="selectStaticOption('card-sundae', 'Maracuyá', 5, this)">Maracuyá (S/5)</button>
+                            <button class="chip-btn" onclick="selectStaticOption('card-sundae', 'Oreo', 6, this)">Oreo (S/6)</button>
+                            <button class="chip-btn" onclick="selectStaticOption('card-sundae', 'Chin Chin', 6, this)">Chin Chin (S/6)</button>
                         </div>
-                        <button class="btn btn-primary btn-sm" style="width:100%" onclick="addStaticToCartWithValidation('Sundae', 4, 'card-sundae')">Agregar</button>
+                        <button class="btn btn-primary btn-sm" style="width:100%" onclick="addStaticToCartWithValidation('Sundae', 5, 'card-sundae')">Agregar</button>
                     </div>
                 </div>
                 <div class="static-card" id="card-artesanal-cono">
                     <img loading="lazy" decoding="async" src="/tenants/deli-fresas/menu/helado-artesanal.webp" class="static-img">
                     <div class="static-info">
                         <h3>Cono Artesanal</h3>
-                        <span class="static-price-tag" id="price-card-artesanal-cono">Desde S/ 2.50</span>
+                        <span class="static-price-tag" id="price-card-artesanal-cono">Desde S/ 3.00</span>
                         <p style="font-size:0.75rem; margin:0 0 5px 0;">Tamaño:</p>
                         <div class="chip-container">
-                            <button class="chip-btn" onclick="selectStaticOption('card-artesanal-cono', '1 Bola', 2.50, this)">1 Bola</button>
-                            <button class="chip-btn" onclick="selectStaticOption('card-artesanal-cono', '2 Bolas', 4.00, this)">2 Bolas</button>
+                            <button class="chip-btn" onclick="selectStaticOption('card-artesanal-cono', '1 Bola', 3.00, this)">1 bola (S/3)</button>
+                            <button class="chip-btn" onclick="selectStaticOption('card-artesanal-cono', '2 Bolas', 5.00, this)">2 bolas (S/5)</button>
                         </div>
-                        <button class="btn btn-primary btn-sm" style="width:100%" onclick="addStaticToCartWithValidation('Cono Artesanal', 2.50, 'card-artesanal-cono')">Agregar</button>
+                        <button class="btn btn-primary btn-sm" style="width:100%" onclick="addStaticToCartWithValidation('Cono Artesanal', 3.00, 'card-artesanal-cono')">Agregar</button>
                     </div>
                 </div>
                 <div class="static-card" id="card-artesanal-vaso">
@@ -378,8 +381,8 @@
                         <span class="static-price-tag" id="price-card-artesanal-vaso">Desde S/ 3.00</span>
                         <p style="font-size:0.75rem; margin:0 0 5px 0;">Tamaño:</p>
                         <div class="chip-container">
-                            <button class="chip-btn" onclick="selectStaticOption('card-artesanal-vaso', '1 Bola', 3.00, this)">1 Bola</button>
-                            <button class="chip-btn" onclick="selectStaticOption('card-artesanal-vaso', '2 Bolas', 5.00, this)">2 Bolas</button>
+                            <button class="chip-btn" onclick="selectStaticOption('card-artesanal-vaso', '1 Bola', 3.00, this)">1 bola (S/3)</button>
+                            <button class="chip-btn" onclick="selectStaticOption('card-artesanal-vaso', '2 Bolas', 6.00, this)">2 bolas (S/6)</button>
                         </div>
                         <button class="btn btn-primary btn-sm" style="width:100%" onclick="addStaticToCartWithValidation('Vaso Artesanal', 3.00, 'card-artesanal-vaso')">Agregar</button>
                     </div>
