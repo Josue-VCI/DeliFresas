@@ -15,14 +15,15 @@ const liquids = [
 ];
 
 const creams = [
-    { name: "Choco-Oreo", img: "/tenants/deli-fresas/options/crema-choco-oreo.webp" },
+    { name: "Clásica", img: "/tenants/deli-fresas/options/crema-clasica.webp" },
     { name: "Maracumango", img: "/tenants/deli-fresas/options/crema-maracumango.webp" },
-    { name: "Clásica (Vainilla)", img: "/tenants/deli-fresas/options/crema-clasica.webp" },
-    { name: "Morochas (Mar)", img: "/tenants/deli-fresas/options/crema-morochas.webp" },
-    { name: "Chocochips (Jue)", img: "/tenants/deli-fresas/options/crema-chocochips.webp" },
-    { name: "Chocolúcuma (Finde)", img: "/tenants/deli-fresas/options/crema-chocolucuma.webp" },
-    { name: "Moka (Finde)", img: "/tenants/deli-fresas/options/crema-moka.webp" },
-    { name: "Chocomenta (Finde)", img: "/tenants/deli-fresas/options/crema-chocomenta.webp" }
+    { name: "Choco oreo", img: "/tenants/deli-fresas/options/crema-choco-oreo.webp" }
+    // Sabores pausados temporalmente; conservar para una futura reactivación:
+    // { name: "Morochas (Mar)", img: "/tenants/deli-fresas/options/crema-morochas.webp" },
+    // { name: "Chocochips (Jue)", img: "/tenants/deli-fresas/options/crema-chocochips.webp" },
+    // { name: "Chocolúcuma (Finde)", img: "/tenants/deli-fresas/options/crema-chocolucuma.webp" },
+    // { name: "Moka (Finde)", img: "/tenants/deli-fresas/options/crema-moka.webp" },
+    // { name: "Chocomenta (Finde)", img: "/tenants/deli-fresas/options/crema-chocomenta.webp" }
 ];
 
 const fruits = [
