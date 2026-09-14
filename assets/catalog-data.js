@@ -51,3 +51,62 @@ const toppings = [
     { name: "Barquillo", img: "/tenants/deli-fresas/options/topping-barquillo.webp" }
 ];
 
+/*
+ * Estos precios se actualizaron primero en la carta local. El catálogo administrado
+ * todavía puede responder temporalmente con los valores anteriores y app.js hidrata
+ * esos datos después de cargar la página. Este guard solo corrige esos valores viejos
+ * concretos; las selecciones del cliente (por ejemplo S/ 6) siguen funcionando normal.
+ */
+const localMenuPriceGuards = [
+    {
+        selector: '#card-helado-soft .static-price-tag',
+        stale: ['S/ 2.00', 'Desde S/ 2.00'],
+        current: 'S/ 3.00'
+    },
+    {
+        selector: '#price-card-sundae',
+        stale: ['S/ 4.00', 'Desde S/ 4.00'],
+        current: 'Desde S/ 5.00'
+    },
+    {
+        selector: '#price-card-artesanal-cono',
+        stale: ['S/ 2.50', 'Desde S/ 2.50'],
+        current: 'Desde S/ 3.00'
+    }
+];
+
+function restoreUpdatedMenuPrices() {
+    let corrected = false;
+
+    localMenuPriceGuards.forEach(({ selector, stale, current }) => {
+        const node = document.querySelector(selector);
+        if (!node) return;
+
+        const displayed = node.textContent.trim();
+        if (!stale.includes(displayed)) return;
+
+        node.textContent = current;
+        corrected = true;
+    });
+
+    return corrected;
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    // Cubre el caso en que la API respondió antes de DOMContentLoaded.
+    restoreUpdatedMenuPrices();
+
+    // Cubre el caso normal: app.js termina el fetch después y rehidrata la carta.
+    const priceSyncObserver = new MutationObserver(() => {
+        if (restoreUpdatedMenuPrices()) priceSyncObserver.disconnect();
+    });
+
+    priceSyncObserver.observe(document.body, {
+        childList: true,
+        subtree: true,
+        characterData: true
+    });
+
+    // No se necesita observar cambios indefinidamente una vez terminada la carga inicial.
+    window.setTimeout(() => priceSyncObserver.disconnect(), 15000);
+}, { once: true });
