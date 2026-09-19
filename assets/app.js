@@ -41,6 +41,13 @@ async function loadManagedCatalog() {
 }
 
 function hydrateManagedCatalog() {
+    const localPriceCardIds = new Set([
+        'card-helado-soft',
+        'card-sundae',
+        'card-artesanal-cono',
+        'card-artesanal-vaso'
+    ]);
+
     cups.forEach(cup => {
         const product = catalogProduct(cup.name);
         if (product) {
@@ -69,7 +76,11 @@ function hydrateManagedCatalog() {
         if (!product) return;
         const price = card.querySelector('.static-price-tag');
         const image = card.querySelector('img');
-        if (price) price.textContent = (product.variants?.length ? 'Desde ' : '') + 'S/ ' + Number(product.price).toFixed(2);
+        // Estos precios y variantes se administran en la carta pública hasta
+        // que el catálogo remoto sea actualizado con la misma información.
+        if (price && !localPriceCardIds.has(card.id)) {
+            price.textContent = (product.variants?.length ? 'Desde ' : '') + 'S/ ' + Number(product.price).toFixed(2);
+        }
         if (image && product.images?.[0]?.url) image.src = product.images[0].url;
     });
 }
