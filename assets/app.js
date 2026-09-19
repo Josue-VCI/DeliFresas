@@ -4,6 +4,7 @@ let currentStep = 0;
 let selection = { cup: null, liquids: [], creams: [], fruits: [], toppings: [] };
 let cart = [];
 let staticSelections = {};
+let campaignSelections = {};
 let tempConfig = {}; // Para el modal de configuración avanzada
 
 /* --- CATÁLOGO ADMINISTRADO POR VCI --- */
@@ -245,6 +246,40 @@ function addSimpleStaticToCart(name, price) {
         details: null,
         cartId: Date.now()
     });
+    updateCartBar();
+    renderCartList();
+    openCartModal();
+}
+
+/* --- CAMPAÑA TEMPORAL: FLORES AMARILLAS --- */
+function selectCampaignOption(blockId, choice, value, btnElement) {
+    campaignSelections[blockId] = { ...campaignSelections[blockId], [choice]: value };
+
+    const choiceGroup = btnElement.closest(`[data-campaign-choice="${choice}"]`);
+    choiceGroup.querySelectorAll('.campaign-chip').forEach(button => button.classList.remove('selected'));
+    btnElement.classList.add('selected');
+}
+
+function addCampaignProduct(productName, price, blockId) {
+    const selection = campaignSelections[blockId] || {};
+    const card = document.getElementById(blockId);
+
+    if (!selection.relleno || !selection.keke) {
+        const button = card.querySelector('.spring-btn');
+        button.classList.add('shake-btn');
+        setTimeout(() => button.classList.remove('shake-btn'), 500);
+        if (navigator.vibrate) navigator.vibrate(200);
+        alert('⚠️ Elige el relleno y el sabor de keke antes de agregar.');
+        return;
+    }
+
+    cart.push({
+        name: `${productName} - Relleno: ${selection.relleno} · Keke: ${selection.keke}`,
+        price,
+        details: null,
+        cartId: Date.now()
+    });
+
     updateCartBar();
     renderCartList();
     openCartModal();

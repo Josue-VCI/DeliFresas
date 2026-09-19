@@ -45,6 +45,7 @@
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="#catalogo" onclick="resetBuilder()">Fresas</a></li>
+                <li><a href="#flores-amarillas">Flores Amarillas</a></li>
                 <li><a href="#frapes">Frapés</a></li>
                 <li><a href="#jugos">Jugos</a></li>
                 <li><a href="#donas">Donas</a></li>
@@ -68,6 +69,104 @@
             <a href="#catalogo" class="btn btn-primary" onclick="resetBuilder()">
                 Armar mi vaso <i class="fa-solid fa-spoon"></i>
             </a>
+        </div>
+    </section>
+
+    <!-- CAMPAÑA TEMPORAL: FLORES AMARILLAS · SEPTIEMBRE -->
+    <section id="flores-amarillas" class="spring-campaign" aria-labelledby="flores-amarillas-title">
+        <div class="container">
+            <div class="spring-campaign__intro">
+                <div class="spring-campaign__copy">
+                    <span class="spring-campaign__eyebrow"><i class="fa-solid fa-sun"></i> Especial de septiembre</span>
+                    <h2 id="flores-amarillas-title">Regala amarillo,<br><span>regala una sonrisa</span></h2>
+                    <p>Una colección temporal de detalles florales hechos para celebrar la primavera.</p>
+                    <a href="#flores-amarillas-productos" class="spring-campaign__link">Ver productos <i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+                <figure class="spring-campaign__poster">
+                    <img loading="lazy" decoding="async" src="/tenants/deli-fresas/campaigns/flores-amarillas/catalogo-flores-amarillas.jpeg" alt="Catálogo D'Eli Fresa para Flores Amarillas">
+                </figure>
+            </div>
+
+            <div class="spring-products" id="flores-amarillas-productos">
+                <article class="spring-product spring-product--cupcake" id="campaign-cupcake-1">
+                    <img loading="lazy" decoding="async" class="spring-product__image" src="/tenants/deli-fresas/campaigns/flores-amarillas/cupcakes-y-alfajores.jpeg" alt="Cupcake floral de D'Eli Fresa">
+                    <div class="spring-product__content">
+                        <div class="spring-product__heading"><h3>Cupcake floral</h3><span>S/ 8</span></div>
+                        <p>1 unidad · En caja y lazo · Chantilly</p>
+                        <div class="spring-choice-group" data-campaign-choice="relleno">
+                            <strong>Relleno</strong>
+                            <div class="chip-container">
+                                <button class="chip-btn campaign-chip" onclick="selectCampaignOption('campaign-cupcake-1', 'relleno', 'Manjar', this)">Manjar</button>
+                                <button class="chip-btn campaign-chip" onclick="selectCampaignOption('campaign-cupcake-1', 'relleno', 'Chocolate', this)">Chocolate</button>
+                            </div>
+                        </div>
+                        <div class="spring-choice-group" data-campaign-choice="keke">
+                            <strong>Keke</strong>
+                            <div class="chip-container">
+                                <button class="chip-btn campaign-chip" onclick="selectCampaignOption('campaign-cupcake-1', 'keke', 'Vainilla', this)">Vainilla</button>
+                                <button class="chip-btn campaign-chip" onclick="selectCampaignOption('campaign-cupcake-1', 'keke', 'Chocolate', this)">Chocolate</button>
+                            </div>
+                        </div>
+                        <button class="btn spring-btn" onclick="addCampaignProduct('Cupcake floral · 1 unidad', 8, 'campaign-cupcake-1')">Agregar al pedido</button>
+                    </div>
+                </article>
+
+                <article class="spring-product spring-product--alfajores">
+                    <img loading="lazy" decoding="async" class="spring-product__image" src="/tenants/deli-fresas/campaigns/flores-amarillas/cupcakes-y-alfajores.jpeg" alt="Alfajores florales de D'Eli Fresa">
+                    <div class="spring-product__content">
+                        <div class="spring-product__heading"><h3>Alfajores florales</h3><span>S/ 18</span></div>
+                        <p>6 unidades · Relleno de manjar · En caja y lazo</p>
+                        <div class="spring-product__fixed"><i class="fa-solid fa-flower"></i> Seis alfajores con forma de flor</div>
+                        <button class="btn spring-btn" onclick="addSimpleStaticToCart('Alfajores florales · 6 unidades', 18)">Agregar al pedido</button>
+                    </div>
+                </article>
+
+                <article class="spring-product" id="campaign-cupcake-6">
+                    <img loading="lazy" decoding="async" class="spring-product__image" src="/tenants/deli-fresas/campaigns/flores-amarillas/caja-cupcakes-6.jpeg" alt="Caja de seis cupcakes florales de D'Eli Fresa">
+                    <div class="spring-product__content">
+                        <div class="spring-product__heading"><h3>Caja de cupcakes</h3><span>S/ 35</span></div>
+                        <p>6 unidades · En caja y lazo · Chantilly</p>
+                        <div class="spring-choice-group" data-campaign-choice="relleno">
+                            <strong>Relleno</strong>
+                            <div class="chip-container">
+                                <button class="chip-btn campaign-chip" onclick="selectCampaignOption('campaign-cupcake-6', 'relleno', 'Manjar', this)">Manjar</button>
+                                <button class="chip-btn campaign-chip" onclick="selectCampaignOption('campaign-cupcake-6', 'relleno', 'Chocolate', this)">Chocolate</button>
+                            </div>
+                        </div>
+                        <div class="spring-choice-group" data-campaign-choice="keke">
+                            <strong>Keke</strong>
+                            <div class="chip-container">
+                                <button class="chip-btn campaign-chip" onclick="selectCampaignOption('campaign-cupcake-6', 'keke', 'Vainilla', this)">Vainilla</button>
+                                <button class="chip-btn campaign-chip" onclick="selectCampaignOption('campaign-cupcake-6', 'keke', 'Chocolate', this)">Chocolate</button>
+                            </div>
+                        </div>
+                        <button class="btn spring-btn" onclick="addCampaignProduct('Caja de cupcakes florales · 6 unidades', 35, 'campaign-cupcake-6')">Agregar al pedido</button>
+                    </div>
+                </article>
+
+                <article class="spring-product" id="campaign-cupcake-4">
+                    <img loading="lazy" decoding="async" class="spring-product__image" src="/tenants/deli-fresas/campaigns/flores-amarillas/caja-cupcakes-4.jpeg" alt="Caja de cuatro cupcakes florales de D'Eli Fresa">
+                    <div class="spring-product__content">
+                        <div class="spring-product__heading"><h3>Caja de cupcakes</h3><span>S/ 25</span></div>
+                        <p>4 unidades · En caja y lazo · Chantilly</p>
+                        <div class="spring-choice-group" data-campaign-choice="relleno">
+                            <strong>Relleno</strong>
+                            <div class="chip-container">
+                                <button class="chip-btn campaign-chip" onclick="selectCampaignOption('campaign-cupcake-4', 'relleno', 'Manjar', this)">Manjar</button>
+                                <button class="chip-btn campaign-chip" onclick="selectCampaignOption('campaign-cupcake-4', 'relleno', 'Chocolate', this)">Chocolate</button>
+                            </div>
+                        </div>
+                        <div class="spring-choice-group" data-campaign-choice="keke">
+                            <strong>Keke</strong>
+                            <div class="chip-container">
+                                <button class="chip-btn campaign-chip" onclick="selectCampaignOption('campaign-cupcake-4', 'keke', 'Vainilla', this)">Vainilla</button>
+                                <button class="chip-btn campaign-chip" onclick="selectCampaignOption('campaign-cupcake-4', 'keke', 'Chocolate', this)">Chocolate</button>
+                            </div>
+                        </div>
+                        <button class="btn spring-btn" onclick="addCampaignProduct('Caja de cupcakes florales · 4 unidades', 25, 'campaign-cupcake-4')">Agregar al pedido</button>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
