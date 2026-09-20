@@ -233,15 +233,15 @@ header {
 .campaign-chip.selected { background: #c47d05; border-color: #c47d05; box-shadow: 0 2px 8px rgba(129, 80, 0, .28); }
 .spring-product__fixed { color: #6d4811; font-size: .84rem; font-weight: 700; background: #fff5c8; border-radius: 12px; padding: 10px; margin: 2px 0 16px; }
 .spring-product__fixed i { color: #c47d05; margin-right: 5px; }
-.spring-btn { width: 100%; margin-top: auto; background: #653d08; color: #fff; box-shadow: 0 4px 14px rgba(98, 60, 8, .28); }
-.spring-btn:hover { background: #a46400; color: #fff; }
+.spring-campaign .spring-btn { width: 100%; margin-top: auto; background: #653d08; color: #fff !important; box-shadow: 0 4px 14px rgba(98, 60, 8, .28); }
+.spring-campaign .spring-btn:hover { background: #a46400; color: #fff !important; }
 .spring-campaign__order { display: flex; align-items: center; gap: 16px; max-width: 760px; margin: clamp(28px, 5vw, 52px) auto 0; padding: 18px 20px; border: 1px solid rgba(100, 61, 8, .18); border-radius: 18px; background: rgba(255, 255, 255, .68); box-shadow: 0 12px 26px rgba(110, 70, 4, .1); }
 .spring-campaign__order > i { font-size: 2rem; color: #25d366; }
 .spring-campaign__order div { display: grid; gap: 2px; flex: 1; }
 .spring-campaign__order strong { color: #5b3404; }
 .spring-campaign__order span { color: #68460f; font-size: .9rem; }
-.spring-order-btn { background: #653d08; color: #fff; white-space: nowrap; }
-.spring-order-btn:hover { background: #a46400; color: #fff; }
+.spring-campaign .spring-order-btn { background: #653d08; color: #fff !important; white-space: nowrap; }
+.spring-campaign .spring-order-btn:hover { background: #a46400; color: #fff !important; }
 @media (max-width: 960px) { .spring-products { grid-template-columns: repeat(2, minmax(0, 1fr)); } .spring-product__image { height: 250px; } }
 @media (max-width: 640px) { .spring-products { grid-template-columns: 1fr; } .spring-product__image { height: 235px; } .spring-product__content > p { min-height: 0; } .spring-campaign__order { align-items: flex-start; flex-wrap: wrap; } .spring-order-btn { width: 100%; text-align: center; } }
 
