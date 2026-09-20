@@ -191,6 +191,56 @@ header {
     margin-bottom: 24px;
 }
 
+/* --- CAMPAÑA TEMPORAL: FLORES AMARILLAS --- */
+.spring-campaign {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(58px, 8vw, 100px) 0;
+    background: linear-gradient(135deg, #fffced 0%, #ffe375 48%, #f8c83c 100%);
+    color: #58370b;
+    border-bottom: 1px solid rgba(112, 72, 8, .14);
+}
+.spring-campaign::before,
+.spring-campaign::after {
+    content: '🌻';
+    position: absolute;
+    font-size: clamp(7rem, 15vw, 15rem);
+    opacity: .16;
+    pointer-events: none;
+}
+.spring-campaign::before { top: -3.5rem; left: -3rem; transform: rotate(-22deg); }
+.spring-campaign::after { right: -3rem; bottom: -4.5rem; transform: rotate(24deg); }
+.spring-campaign .container { position: relative; z-index: 1; }
+.spring-campaign__intro { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(240px, .72fr); gap: clamp(26px, 6vw, 78px); align-items: center; margin-bottom: clamp(34px, 6vw, 65px); }
+.spring-campaign__eyebrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; color: #7a4b03; }
+.spring-campaign__copy h2 { font-family: var(--font-title); color: #5b3404; font-size: clamp(2.8rem, 6vw, 5.3rem); line-height: 1.02; margin: 12px 0 18px; }
+.spring-campaign__copy h2 span { color: #b76d00; }
+.spring-campaign__copy p { max-width: 560px; font-size: 1.08rem; font-weight: 600; color: #68460f; }
+.spring-campaign__link { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; font-weight: 800; color: #5c3907; border-bottom: 2px solid currentColor; padding-bottom: 3px; }
+.spring-campaign__poster { max-width: 285px; justify-self: center; border-radius: 28px; overflow: hidden; transform: rotate(3deg); box-shadow: 0 22px 50px rgba(96, 58, 4, .25); border: 7px solid rgba(255, 255, 255, .72); }
+.spring-campaign__poster img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 36%; }
+.spring-products { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.spring-product { background: rgba(255, 255, 255, .95); border: 1px solid rgba(107, 69, 6, .16); box-shadow: 0 12px 30px rgba(110, 70, 4, .13); border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.spring-product__image { width: 100%; height: 215px; object-fit: cover; object-position: center 31%; border-bottom: 4px solid #ffd85b; }
+.spring-product--alfajores .spring-product__image { object-position: center 72%; }
+.spring-product__content { padding: 16px; display: flex; flex: 1; flex-direction: column; }
+.spring-product__heading { display: flex; gap: 8px; justify-content: space-between; align-items: flex-start; margin-bottom: 7px; }
+.spring-product__heading h3 { color: #5d3909; font-size: 1.08rem; line-height: 1.15; }
+.spring-product__heading span { flex-shrink: 0; background: #5d3909; color: #fff5be; padding: 4px 9px; border-radius: 999px; font-weight: 800; font-size: .9rem; }
+.spring-product__content > p { color: #765722; font-size: .82rem; min-height: 42px; margin-bottom: 13px; }
+.spring-choice-group { margin-bottom: 9px; }
+.spring-choice-group strong { color: #6b4308; display: block; font-size: .77rem; margin-bottom: 4px; }
+.spring-choice-group .chip-container { margin-bottom: 0; }
+.campaign-chip { background: #fff7d4; border-color: #e5b832; color: #65410c; }
+.campaign-chip:hover { background: #ffe179; }
+.campaign-chip.selected { background: #c47d05; border-color: #c47d05; box-shadow: 0 2px 8px rgba(129, 80, 0, .28); }
+.spring-product__fixed { color: #6d4811; font-size: .84rem; font-weight: 700; background: #fff5c8; border-radius: 12px; padding: 10px; margin: 2px 0 16px; }
+.spring-product__fixed i { color: #c47d05; margin-right: 5px; }
+.spring-btn { width: 100%; margin-top: auto; background: #653d08; box-shadow: 0 4px 14px rgba(98, 60, 8, .28); }
+.spring-btn:hover { background: #a46400; }
+@media (max-width: 960px) { .spring-products { grid-template-columns: repeat(2, minmax(0, 1fr)); } .spring-product__image { height: 250px; } }
+@media (max-width: 640px) { .spring-campaign__intro { grid-template-columns: 1fr; text-align: center; } .spring-campaign__copy p { margin: 0 auto; } .spring-campaign__poster { max-width: 220px; order: -1; } .spring-products { grid-template-columns: 1fr; } .spring-product__image { height: 235px; } .spring-product__content > p { min-height: 0; } }
+
 .kids-campaign__eyebrow {
     color: var(--primary-dark);
     font-weight: 800;
